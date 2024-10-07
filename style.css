@@ -212,6 +212,10 @@ nav{
             display: flex;
             overflow-x: scroll;
         }
+        .card{
+            width: 20rem;
+            padding-inline: 10px;
+        }
     }
 
     .card{
