@@ -216,7 +216,7 @@ nav{
 
     .card{
       
-     
+        padding-inline: 10px;
         padding-top: 10px;
         padding-bottom: 30px;
         height: 28rem;
