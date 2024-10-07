@@ -200,12 +200,18 @@ nav{
     gap: 2rem;
     justify-content:center ;
  .sudlanan{
-        width: 80vw;
+        width: 90vw;
         display: grid;
         gap: 3rem;
 
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
       
+    }
+    @media  only screen and (max-width : 940px){
+        .sudlanan{
+            display: flex;
+            overflow-x: scroll;
+        }
     }
 
     .card{
