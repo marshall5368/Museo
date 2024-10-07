@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+
+
+@keyframes design {
+    0%{
+        transform: translateX(20rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 100;
+    }
+}
+
+@keyframes nav {
+    0%{
+        transform: translateX(20rem);
+        
+    }
+    100%{
+        transform: translateX(0);
+        
+    }
+}
+
+
+
+*{
+    pad: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --primary:#D2D2D2;
+    --secondary:#252525;
+    
+}
+body{
+    background-color: var(--primary);
+}
+
+nav{
+    animation: nav ease .9s;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5vh;
+    color: var(--secondary);
+    padding: 10px;
+    .logo{
+        font-weight: bolder;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        color: var(--secondary);
+    }
+
+    .links{
+       display: flex;
+        gap: 6rem;
+
+        font-weight: bolder;
+       a{
+        text-decoration: none;
+        font-size: clamp(1rem, 2vh, 2rem);
+        color: var(--secondary);
+       }
+    }
+
+    .nigthMode{
+        
+        i{
+            font-size: clamp(1rem, 2vw, 2rem);
+            cursor: pointer;
+            color: var(--secondary);
+        }
+    }
+
+    .hidden{
+        display: none;
+    }
+    .hiddenLinks a{
+        text-decoration: none;
+        color: var(--secondary);
+        
+    }
+    .hiddennigthMode{
+        display: flex;
+        flex-direction: row;
+      
+        gap: 6px;
+       
+           color: var(--secondary);
+            font-size: 1rem;
+       
+    }
+    .menu{
+        
+        font-size:1.5rem;
+    }
+
+    @media  only screen and (max-width : 940px) {
+        nav{
+            padding: 2px;
+           
+        }
+        .hidden{
+            display: flex;
+            position: relative;
+            align-items:start;
+            flex-direction: column;
+       
+        }
+        .hiddenLinks{
+            display: none;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 1.5rem;
+            position: absolute;
+            width: 7rem;
+           background-color: #D2D2D2;
+           padding: 10px;
+            color: var(--primary);
+            top:2.5rem;
+            left: -2rem;
+        }
+        
+        .links{
+            display: none;
+        }
+        .nigthMode{
+            display: none;
+        }
+        
+    }
+    
+}
+
+.mainPage{
+    animation: design .8s ease-in;
+    height: 95vh;
+   color: var(--secondary);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+    .textMain{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        padding: clamp(2rem, 5vw, 5rem);
+        h1{
+            font-size: clamp(2rem, 5vw, 5rem);
+        }
+        p{
+            font-size: clamp(1rem,2vw, 1.2rem);
+        }
+
+        button{
+            width: clamp(7rem, 8vw, 8rem);
+            font-size:clamp(1rem, 2vw, 1.3rem);
+            height: 2.5rem;
+            border:none;
+            cursor: pointer;
+           
+            background-color: var(--secondary);
+         
+
+            a{
+                text-decoration: none;
+                color: var(--primary);
+            }
+        }
+    }
+
+    .imageMain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: clamp(20rem, 40vw, 40rem);
+            aspect-ratio: 1.2;
+
+            border-radius: 80px 0px 80px 0px;
+        }
+    }
+}
+
+.newCollection{
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    justify-content:center ;
+ .sudlanan{
+        width: 80vw;
+        display: grid;
+        gap: 3rem;
+
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      
+    }
+
+    .card{
+      
+     
+        padding-top: 10px;
+        padding-bottom: 30px;
+        height: 28rem;
+        background-color: var(--secondary);
+        .imageSection{
+           
+
+            img{
+                width: clamp(20rem, 30vw, 25rem);
+                height: 25rem;
+                aspect-ratio: 1.1;
+            }
+        }
+    }
+}
+
+.about{
+    color:var(--secondary);
+    height: 100vh;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        
+    .AboutText{
+       
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        padding-right: clamp(3rem, 10vw, 10rem);
+        gap: 2rem;
+        
+        h1{
+            font-size: clamp(3rem, 5vw, 5rem);
+        }
+        p{
+            font-size: clamp(1rem,2vw, 1.2rem);
+        }
+
+        .stats{
+            background-color: var(--secondary);
+            color: var(--primary);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            width: max-content;
+            padding: clamp(.5rem, 2vw, 1.5rem);
+            
+            .div{
+                font-size: 3rem;
+            }
+
+            .year, .count, .yearGoing{
+                text-align: center;
+
+                h2{
+                    font-size: clamp(1rem, 3vw, 3rem);
+                }
+                p{
+                    font-size: clamp(.8rem, 2vw, 1.5rem);
+                }
+            }
+        }
+    }
+
+    .AboutImage{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: clamp(20rem, 40vw, 40rem);
+            aspect-ratio: 1.2;
+
+            border-radius: 0px 80px 0px 80px;
+        }
+    }
+}
+
+.photoCollection{
+
+    
+    color: var(--secondary);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   
+    align-items: center;
+    gap: 2REM;
+    .photoText{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 30px;
+       
+
+        h1{
+            font-size: clamp(3rem, 5vw, 5rem);
+        }
+        p{
+            font-size: clamp(1rem,2vw, 1.2rem);
+        }
+
+        button{
+           
+            height: 2.5rem;
+            border:1px solid var(--secondary);
+            cursor: pointer;
+            width: clamp(7rem, 8vw, 8rem);
+            font-size:clamp(1rem, 2vw, 1.3rem);
+            background-color:transparent;
+         
+
+            a{
+                text-decoration: none;
+                color: var(--secondary);
+            }
+        }
+    }
+
+    .photoImage{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        
+        .photocontainer{
+           
+            display:flex;
+            flex-direction: row;
+            gap: 2rem;
+           overflow-x: hidden;
+
+            .photoCard{
+                height: 25rem;
+                background-color: var(--secondary);
+                color: var(--primary);
+                padding-inline: 10px;
+                padding-top:10px ;
+                padding-bottom:20px ;
+                .imageCard{
+                    width: 20rem;
+                  
+
+                    img{
+                        aspect-ratio: 1.0;
+                        width: 20rem;
+                    }
+                }
+            }
+        }
+        @media  only screen and (max-width : 940px){
+            .photocontainer{
+                overflow-x: scroll;
+            }
+        }
+    }
+}
+
+.Galery{
+   
+
+    color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    gap: 100px;
+    .titleGalery{
+       
+        h1{
+            font-size: clamp(2rem, 5vw, 5rem);
+        }
+    }
+
+    .GaleryContainer{
+        
+       
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        gap: 50px;
+        width: 80vw;
+
+        
+        .cardGalery{
+            
+            color: var(--primary);
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+         
+           background-color: var(--secondary);
+            height: 25rem;
+            padding: 10px;
+            .imageGalery{
+            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                 
+                    width: 17rem;
+                    aspect-ratio: .8;
+                    
+                }
+            }
+        }
+       
+
+    
+}
+
+}
+
+.contacts{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    color: var(--secondary);
+
+    .textContact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px 100px 0px 30px;
+        gap: 20px;
+
+
+        .textSection{
+          flex-direction: column;
+          display:flex ;
+          gap: 10px;
+            h1{
+                font-size: clamp(3rem, 5vw, 5rem);
+
+            }
+            p{
+                font-size: clamp(1rem,2vw, 1.2rem);
+            }
+        }
+
+        .star{
+            display: flex;
+            gap: 10px;
+            
+            i{
+                font-size: clamp(1.5rem, 2vw, 2rem);
+            cursor: pointer;
+            color: var(--secondary);
+            }
+        }
+
+        .Logo{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            a{
+                text-decoration: none;
+                color: var(--secondary);
+                font-size: clamp(1rem,2vw, 1.2rem);
+            }
+            i{
+                font-size: clamp(1rem, 2vw, 2rem);
+            }
+        }
+    }
+    .imageContact{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            width: clamp(20rem, 40vw, 40rem);
+            aspect-ratio: 1.2;
+
+            border-radius: 80px 0px 80px 0px;
+        }
+    }
+}
+
+.footer{
+    height: 20vh;
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.Main{
+   
+    display: Flex;
+    flex-direction: column;
+    animation: design .9s ease;
+    padding: 20px;
+    gap: 2rem;
+    .title{
+        color: var(--secondary);
+        
+        h2{
+            font-size: clamp(2rem, 3vw, 3rem);
+        }
+    }
+
+    .ContainerPhoto{
+       
+        overflow-x:hidden;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        gap: 30px;
+
+        .Cardphoto{
+           background-color: var(--secondary);
+            height: 25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 10px;
+            padding-bottom: 30px;
+            img{
+                width: 17rem;
+                aspect-ratio: 0.9;
+            }
+        }
+    }
+
+    @media  only screen and (max-width : 940px){
+        .ContainerPhoto{
+            display: flex;
+            overflow-x: scroll;
+        }
+    }
+
+    .movie{
+        width: 18rem;
+
+        .Cardphoto{
+            background-color: var(--secondary);
+            height: 25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 10px;
+            padding-bottom: 30px;
+            img{
+                width: 17rem;
+                aspect-ratio: 0.9;
+            }
+        }
+    }
+}
+.footer{
+    a{
+        color: var(--primary);
+        text-decoration: none;
+    }
+}
